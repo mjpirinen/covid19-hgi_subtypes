@@ -1,8 +1,9 @@
 ---
 title: "Inferring parts from case-control meta-analysis"
 author: "Matti Pirinen"
-date: "6.12.2021"
+date: '6.12.2021 (Updated: 22.5.2023)'
 output:
+  pdf_document: default
   html_document: default
 ---
 
@@ -120,8 +121,9 @@ $s_{A,k},n_{A,k}^{(\text{eff})}$ and $n_{B,k}^{(\text{eff})}$.
 
 
 If we do not have access to $s_{A,k}$, 
-we need to assume that the standard errors of all cohorts are proportional
-to effective sample size with the same constant, and we have
+we need to assume that the inverses of the standard errors of all cohorts are proportional
+to the square root of the effective sample size with the same constant of proportionality, 
+and we have
 $$
 \text{cor}\left(\widehat{\beta}_{A}, \widehat{\beta}_{B} \right) \approx 
 \frac{\sum_{k=1}^K \sqrt{n_{A,k}^{(\text{eff})}n_{B,k}^{(\text{eff})}}  r_{AB,k}}{\sqrt{n_A^{(\text{eff})} n_B^{(\text{eff})} }}.
@@ -186,7 +188,11 @@ practice had we used simply the latter value rather than the former
 in the Bayesian model comparison framework.
 
 
+### Change log
 
+ * 22.5.2023: Corrected the text about the assumption behind combination of correlations in meta-analysis to the form "the inverses of the standard errors of all cohorts are proportional
+to the square root of the effective sample size with the same constant of proportionality". Previously it stated wrongly that "the standard errors of all cohorts are proportional
+to the effective sample size". No changes in formulas.
 
 
 
